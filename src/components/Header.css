@@ -1,11 +1,8 @@
-.color {
-    background-color: transparent;
-}
-
 .navbar:hover { 
+    background-color: white;
+}
+li:hover{
     background-color: black;
-    color: black;
-
 }
 .nav-text { 
     color: blue !important;
@@ -13,6 +10,10 @@
 .navbar-brand {
     padding-left: 25px;
     
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #777777;
 }
 
 
