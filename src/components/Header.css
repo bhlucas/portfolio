@@ -1,0 +1,20 @@
+.color {
+    background-color: transparent;
+}
+
+.navbar:hover { 
+    background-color: black;
+    color: black;
+
+}
+.nav-text { 
+    color: blue !important;
+}
+.navbar-brand {
+    padding-left: 25px;
+    
+}
+
+
+
+  
