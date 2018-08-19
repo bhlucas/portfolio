@@ -1,25 +1,33 @@
-/* .navbar:hover { 
-    background-color: white;
-} */
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
 .nav-link {
     color: #f8f9fa;
+    padding-left: 40px;
  }
- .navbar:hover a{
+ .scroll, .navbar:hover a{
     color: black;
+    transition: color 1s ease;
  }
- .navbar:hover {
+ .scroll, .nav-item:hover a{
+    color: red;
+    transition: background-color 0.2s ease;
+
+ }
+ .scroll, .navbar:hover {
     background-color:#f8f9fa;
+    transition: background-color 1s ease;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 1s ease; */
  }
 .navbar-brand {
     padding-left: 25px;
-    animation-timing-function: ease-in;
 }
-.navbar-default .navbar-nav > li > a {
-    color: white;
-}
-.navbar-nav {
+
+.navbar-nav .nav-item{
     font-size: 40px;
-    margin-left: 40px;
+    margin-left: 60px;
 
 }
 .navbar-brand:hover {
