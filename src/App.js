@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import background from './background_image.jpg'
 import './App.css';
 import Header from './components/Header';
@@ -12,7 +11,7 @@ class App extends Component {
       <div>
           <Header/>
         <div className="container-fluid ">
-          <img src={background} className="bg"/>
+          <img src={background} className="bg mx-auto d-block"/>
         </div>
         <div className="container">
           <Content/>
