@@ -7,19 +7,25 @@ class Header extends Component {
     constructor(props) {
         super(props)
         this.handleScroll = this.handleScroll.bind(this);
-        this.state = {scrolledTop: true, loaded: false}
+        this.state = {scrolledTop: true, loaded: false, currentScrollHeight: 0}
 
     }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
         this.setState({loading: true});
+        window.onscroll =()=>{
+            const newScrollHeight = Math.ceil(window.scrollY / 50) *50;
+            if (this.state.currentScrollHeight != newScrollHeight){
+                this.setState({currentScrollHeight: newScrollHeight})
+            }
+          }
 
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
     handleScroll(e) {
-        if(window.scrollY != 0){
+        if(window.scrollY > 0){
             this.setState({scrolledTop: false});
         }
         else {
@@ -28,11 +34,13 @@ class Header extends Component {
 
     }
     render() {
+     const opacity = Math.min(100 / this.state.currentScrollHeight  , 1)
+
       return ( 
         <div>
-            <nav className={"navbar navbar-expand-lg fixed-top " + (this.state.scrolledTop ? "transparent top" : "bg-light  navbar-light scroll")}>
+            <nav style={{opacity}} className={"navbar navbar-expand-lg fixed-top " + (this.state.scrolledTop ? "top" : "bg-light  navbar-light")}>
                 {/* <a class="navbar-brand" href="#">BHL</a> */}
-                <img src={logo} className={"navbar-brand swing slide-in "} alt="logo" />
+                <img src={logo} className={"navbar-brand swing slide-in"} alt="logo" />
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

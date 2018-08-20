@@ -1,3 +1,4 @@
+
 .slide-in {
     animation: slide-in 0.5s forwards;
     -webkit-animation: slide-in 0.5s forwards;
@@ -28,6 +29,7 @@
 .navbar-nav .nav-item{
     font-size: 40px;
     margin-left: 60px;
+    font-family: "HK Grotesk",sans-serif;
 
 }
 .navbar-brand:hover {
@@ -123,3 +125,32 @@
         transform: rotateZ(0deg);
     }
 }
+
+.navbar-brand {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      padding-right: 100%;
+      width: 25%; 
+    }
+  
+    to {
+      padding-right: 0%;
+      width: 5%;
+    }
+  }
+
+/* .fade-out {
+    width: 100px;
+    height: 100px;
+    animation: fade 3s backwards;
+    background-color:rgba(242, 245, 169, 1);
+}
+
+@keyframes fade {
+    from {background-color:rgba(242, 245, 169, 1);}
+    to {background-color:rgba(242, 245, 169, 0);}
+} */
