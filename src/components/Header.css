@@ -1,156 +1,33 @@
-
-.slide-in {
-    animation: slide-in 0.5s forwards;
-    -webkit-animation: slide-in 0.5s forwards;
+.navbar {
+    background: transparent;
+    transition: background 1s ease-in-out .2s;
 }
-.nav-link {
-    color: #f8f9fa;
-    padding-left: 40px;
- }
- .scroll, .navbar:hover a{
-    color: black;
-    transition: color 1s ease;
- }
- .scroll, .nav-item:hover a{
-    color: red;
-    transition: background-color 0.2s ease;
-
- }
- .scroll, .navbar:hover {
-    background-color:#f8f9fa;
-    transition: background-color 1s ease;
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 1s ease; */
- }
 .navbar-brand {
-    padding-left: 25px;
-}
-
-.navbar-nav .nav-item{
-    font-size: 40px;
-    margin-left: 60px;
-    font-family: "HK Grotesk",sans-serif;
-
-}
-.navbar-brand:hover {
-    -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-    -webkit-transform: rotateZ(-10deg);
-    -ms-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
-}
-
-.swing:hover
-{
-        -webkit-animation: swing 1s ease-in;
-        animation: swing 1s ease-in;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-}
-
-@-webkit-keyframes swing
-{
-    15%
-    {
-        -webkit-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-    30%
-    {
-        -webkit-transform: rotateZ(10deg);
-       transform: rotateZ(10deg);
-    } 
-    50%
-    {
-        -webkit-transform: rotateZ(-5deg);
-        transform: rotateZ(-5deg);
-    }
-    65%
-    {
-        -webkit-transform: rotateZ(5deg);
-        transform: rotateZ(5deg);
-    }
-    80%
-    {
-        -webkit-transform: rotateZ(-2deg);
-        transform: rotateZ(-2deg);
-    }
-    90%
-    {
-        -webkit-transform: rotateZ(2deg);
-        transform: rotateZ(2deg);
-    }
-    100%
-    {
-        -webkit-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-}
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: rotateZ(-10deg);
-        transform: rotateZ(-10deg);
-    }
-    30%
-    {
-        -webkit-transform: rotateZ(10deg);
-       transform: rotateZ(10deg);
-    } 
-    50%
-    {
-        -webkit-transform: rotateZ(-5deg);
-        transform: rotateZ(-5deg);
-    }
-    65%
-    {
-        -webkit-transform: rotateZ(5deg);
-        transform: rotateZ(5deg);
-    }
-    80%
-    {
-        -webkit-transform: rotateZ(-2deg);
-        transform: rotateZ(-2deg);
-    }
-    90%
-    {
-        -webkit-transform: rotateZ(2deg);
-        transform: rotateZ(2deg);
-    }
-    100%
-    {
-        -webkit-transform: rotateZ(0deg);
-        transform: rotateZ(0deg);
-    }
-}
-
-.navbar-brand {
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
-    from {
-      padding-right: 100%;
-      width: 25%; 
-    }
-  
-    to {
-      padding-right: 0%;
-      width: 5%;
-    }
-  }
-
-/* .fade-out {
-    width: 100px;
+    width: auto;
     height: 100px;
-    animation: fade 3s backwards;
-    background-color:rgba(242, 245, 169, 1);
 }
+.scrolled, .navbar:hover{
+    background: rgba(248, 249, 250, 1);
+    transition: background 1s ease-in-out .2s;
 
-@keyframes fade {
-    from {background-color:rgba(242, 245, 169, 1);}
-    to {background-color:rgba(242, 245, 169, 0);}
-} */
+}
+.navbar.scrolled .navbar-nav li a{
+    color: black !important;
+}
+.navbar .navbar-nav li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    margin-left: 50px;
+    color: white !important;
+    transition: color 1s ease-in-out .2s;
+
+}
+.navbar:hover .navbar-nav li a{
+    color: black !important;
+    transition: color 1s ease-in;
+
+} 
+.navbar .navbar-nav li a:hover {
+    color: red !important;
+    transition: color 0s ease-in-out 0s;
+}
