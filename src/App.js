@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import background from './background_image.jpg'
-import './App.css';
+import styles from'./App.css';
 import Header from './components/Header';
-import Content from './components/Content';
+import Skills from './components/Skills';
+import About from './components/About';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className={styles.App}>
           <Header/>
-        <div className="container-fluid ">
-          <img src={background} className="bg mx-auto d-block"/>
-        </div>
+        <About/>
         <div className="container">
-          <Content/>
+          <Skills/>
         </div>
 
       </div>
