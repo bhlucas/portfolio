@@ -2,7 +2,7 @@
     background: transparent;
     transition: background 1s ease-in-out .2s;
 }
-.navbar-brand {
+.navbarBrand {
     width: auto;
     height: 100px;
     animation: 1s ease-out 0s 1 slideInFromLeft;
@@ -14,11 +14,13 @@
         transition: background 1s ease-in-out .2s;
 
     }
+    .scrolled .navItem a{
+        color: black !important;
+        transition: color 1s ease-in-out .2s;
+
+    }
 }
-.navbar.scrolled .navbar-nav li a{
-    color: black !important;
-}
-.navbar .navbar-nav li a {
+.navItem {
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     margin-left: 50px;
@@ -26,26 +28,24 @@
     transition: color 1s ease-in-out .2s;
 
 }
-.navbar:hover .navbar-nav li a{
-    color: black !important;
-    transition: color 1s ease-in;
 
+.navbar:hover .navItem a {
+    color: black !important;
+    transition: color 1s ease-in-out .2s;
 } 
-.navbar .navbar-nav li a:hover {
+.navbar .navItem:hover a{
     color: red !important;
     transition: color 0s ease-in-out 0s;
 }
 
-/* .logo:hover {
+.logo:hover {
     cursor: pointer;
 	animation: bounce 1s;
-} */
-.navbar-toggler-icon {
-    color: black;
 }
 
 
-/* @keyframes bounce {
+
+@keyframes bounce {
 	0%, 20%, 60%, 100% {
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
@@ -60,7 +60,7 @@
 		-webkit-transform: translateY(-10px);
 		transform: translateY(-10px);
 	}
-} */
+}
 
 @keyframes slideInFromLeft {
   0% {

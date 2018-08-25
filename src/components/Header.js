@@ -36,25 +36,24 @@ class Header extends Component {
     }
     render() {
      const opacity = 1 - Math.min(200 / this.state.currentScrollHeight  , 1);
-
       return ( 
-          
-        <div>
-            <nav  className={"navbar navbar-expand-lg fixed-top navbar-dark" + (this.state.scrolledTop ? "" : "scrolled navbar-light bg-light")}>
-                <img src={logo} className={"navbar-brand slide-in logo "} alt="logo" />
+        
+        <div className={styles.Header}>
+            <nav  className={(this.state.scrolledTop ? "" : styles.scrolled) + " " + styles.navbar+" navbar navbar-expand-lg fixed-top navbar-dark"}>
+                <img src={logo} className={styles.navbarBrand+" "+styles.logo+" navbar-brand slide-in "} alt="logo" />
 
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"/>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item active">
+                        <li className={styles.navItem + " nav-item active"}>
                             <a className="nav-link" href="#skills-anchor">Skills <span className="sr-only">(current)</span></a>
                         </li>
-                        <li className="nav-item">
+                        <li className={styles.navItem + " nav-item"}>
                             <a className="nav-link" href="#">Portfoilio</a>
                         </li>
-                        <li className="nav-item">
+                        <li className={styles.navItem + " nav-item"}>
                             <a className="nav-link" href="#">Career</a>
                         </li>
                     </ul>
